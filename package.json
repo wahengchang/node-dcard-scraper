@@ -1,0 +1,35 @@
+{
+  "name": "babel_template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node es7compiler",
+    "test": "./node_modules/mocha/bin/mocha ./test"
+  },
+  "babel": {
+    "presets": [
+      "stage-3",
+      "latest"
+    ]
+  },
+  "dependencies": {
+    "babel-core": "^6.18.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-stage-3": "^6.17.0",
+    "cheerio": "^0.22.0",
+    "downloadAPI": "^2.0.0",
+    "request": "^2.79.0"
+  },
+  "author": "Peter Chang <wahengchang@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "babel-core": "^6.18.2",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-3": "^6.17.0",
+    "mocha": "^3.2.0"
+  }
+}
