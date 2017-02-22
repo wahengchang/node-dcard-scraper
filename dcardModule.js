@@ -6,10 +6,8 @@ var cheerio = require('cheerio');
 
 
 /**
- * Adds two numbers
- * @param {Number} a 
- * @param {Number} b
- * @return {Number} sum
+ * fetchTitle, return an array of object, which has title and link as properties
+ * @return {Array} returnData, [{title:..., link:...}, ...]
  */
 let fetchTitle = () => 
 new Promise ((resolve, reject)=>{
@@ -36,10 +34,9 @@ new Promise ((resolve, reject)=>{
 
 
 /**
- * Adds two numbers
- * @param {Number} a 
- * @param {Number} b
- * @return {Number} sum
+ * fetchTopic, given url of the page and return an Array of image URLs
+ * @param {String} url, 
+ * @return {Array} returnData, array of image URLs, which is going to download
  */
 let fetchTopic = (url) => 
 new Promise ((resolve, reject)=>{
