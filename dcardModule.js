@@ -4,6 +4,9 @@
 var request = require('request');
 var cheerio = require('cheerio');
 
+const subUrl = '/f/vehicle';
+// const subUrl = '/f/sex'
+
 
 /**
  * fetchTitle, return an array of object, which has title and link as properties
@@ -12,7 +15,7 @@ var cheerio = require('cheerio');
 let fetchTitle = () => 
 new Promise ((resolve, reject)=>{
 	const url = 'https://www.dcard.tw';
-	request(url+'/f/sex', function(error, response, html){
+	request(url+subUrl, function(error, response, html){
 		if(error) reject(error);
 		var $ = cheerio.load(html);
 		let returnData = [];
@@ -40,7 +43,7 @@ new Promise ((resolve, reject)=>{
  */
 let fetchTopic = (url) => 
 new Promise ((resolve, reject)=>{
-	var baseUrl = 'https://www.dcard.tw/f/sex/p/';
+	var baseUrl = 'https://www.dcard.tw'+subUrl+'/p/';
 	var afterUrl = url.replace(baseUrl, "");
 
 	request(baseUrl + encodeURIComponent(afterUrl), function(error, response, html){
