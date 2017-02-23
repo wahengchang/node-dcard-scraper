@@ -3,7 +3,7 @@
 
 ## Install
 ```
-$ git clone git@github.com:wahengchang/node-dcard-scraper.git
+$ git clone https://github.com/wahengchang/node-dcard-scraper
 $ npm install
 ```
 
